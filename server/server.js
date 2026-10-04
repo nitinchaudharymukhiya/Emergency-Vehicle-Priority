@@ -73,6 +73,15 @@ function persistTrips() {
 
 loadPersistedTrips();
 
+app.get("/", (req, res) => {
+  res.json({
+    status: "online",
+    message: "ClearPath Backend is running",
+    service: "Emergency Vehicle Priority"
+  });
+});
+
+
 // REST API Endpoints
 app.get("/api/health", (req, res) => {
   res.json({
@@ -433,9 +442,9 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`====================================================`);
-  console.log(`🚑 ClearPath Server running on http://localhost:${PORT}`);
+  console.log(`🚑 ClearPath Server running on port ${PORT}`);
   console.log(`📍 Configured for Chandigarh (3 Hospitals, 10 Sector Chowks)`);
   console.log(`====================================================`);
 });

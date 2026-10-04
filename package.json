@@ -1,0 +1,23 @@
+{
+  "name": "clearpath-emergency-system",
+  "version": "1.0.0",
+  "description": "ClearPath - Real-time Ambulance Emergency & Green Corridor Traffic Coordination System",
+  "scripts": {
+    "server": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "build:client": "cd client && npm run build"
+  },
+  "keywords": [
+    "ambulance",
+    "emergency-coordination",
+    "green-corridor",
+    "traffic-management",
+    "socketio",
+    "leaflet",
+    "osrm"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT"
+}
